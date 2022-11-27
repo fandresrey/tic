@@ -1,0 +1,7 @@
+{
+  "name": "tic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
