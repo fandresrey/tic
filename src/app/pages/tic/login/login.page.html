@@ -1,0 +1,83 @@
+<ion-content>
+  <div class="login">
+    <img src="assets/imgs/logo1.png" class="logo"/> 
+    <!-- <div class="grid">
+      <div class="col-12" style="text-align: center">
+        <ion-item lines="none" class="input-item">
+          <ion-label hidden="true">Seleccionar País</ion-label>
+          <span *ngIf="country == 'CO'" class="flag-icon flag-icon-co"></span>
+          <span *ngIf="country == 'PA'" class="flag-icon flag-icon-pa"></span>
+          <ion-select
+            mode="md"
+            placeholder="Seleccionar país"
+            okText="Aceptar"
+            [(ngModel)]="country"
+            cancelText="Cerrar"
+          >
+            <ion-select-option *ngFor="let c of countries" [value]="c.value"
+              >{{c.name}}</ion-select-option
+            >
+          </ion-select>
+          <img
+            color="primary"
+            src="assets/icon/network3.png"
+            class="icon"
+            slot="start"
+          />
+        </ion-item>
+      </div>
+    </div> -->
+    <ion-row style="margin-top: 80px;">
+      <ion-item lines="none" class="input-item">
+        <ion-input
+          style="border-bottom: 0px"
+          color="primary"
+          placeholder="Usuario"
+          type="email"
+          [(ngModel)]="user"
+        ></ion-input>
+   
+      </ion-item>
+ 
+      <ion-item lines="none" class="input-item">
+        <ion-input
+          style="border-bottom: 0px"
+          color="primary"
+          placeholder="Password"
+          type="password"
+          [(ngModel)]="password"
+        ></ion-input>
+
+      </ion-item>
+
+      <ion-col size="12" style="text-align: center">
+        <ion-button mode="md" expand="block" (click)="confirmLogin()"
+          >Iniciar Sesión</ion-button
+        >
+      </ion-col>
+
+      <ion-col size="12" style="text-align: center; ">
+        <ion-item lines="none" >
+          <a class="link" [routerLink]="['/recover-password']"
+            ><small>¿Olvidaste tu contraseña?</small></a
+          >
+       
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12" style="text-align: center">
+        <a class="link" [routerLink]="['/register']"
+          ><small>¿Usuario nuevo? <b>Registarse</b></small></a
+        ></ion-col
+      >
+      <br /><br />
+    </ion-row>
+  </div>
+</ion-content>
+<!-- <ion-footer class="footer">
+  <div>
+    <a href="http://adp-solutions.com">
+      <img src="assets/imgs/adp.png" class="logo_designed" />
+    </a>
+  </div>
+</ion-footer> -->
