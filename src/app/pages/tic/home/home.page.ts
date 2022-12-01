@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,12 +16,24 @@ export class HomePage implements OnInit {
     { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() { }
+  constructor(private router: Router,) { }
 
   ngOnInit() {
   }
-  test(){
-
+  maps(){
+    this.router.navigate(["/reserves"], { replaceUrl: false });
    console.log('test');
+  }
+
+  reserves(){
+    this.router.navigate(["/maps"], { replaceUrl: false });
+
+
+  }
+  carrar(){
+
+    this.router.navigate(["/login"], { replaceUrl: false });
+
+
   }
 }

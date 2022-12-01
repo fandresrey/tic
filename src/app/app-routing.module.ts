@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'map',
     loadChildren: () => import('./pages/tic/map/map.module').then( m => m.MapPageModule)
+  },
+  {
+    path: 'maps',
+    loadChildren: () => import('./pages/tic/maps/maps.module').then( m => m.MapsPageModule)
+  },
+  {
+    path: 'reserves',
+    loadChildren: () => import('./pages/tic/reserves/reserves.module').then( m => m.ReservesPageModule)
   }
 ];
 
