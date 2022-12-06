@@ -36,9 +36,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/tic/maps/maps.module').then( m => m.MapsPageModule)
   },
   {
-    path: 'reserves',
+    path: '',
     loadChildren: () => import('./pages/tic/reserves/reserves.module').then( m => m.ReservesPageModule)
-  }
+  },
+
+
 ];
 
 @NgModule({

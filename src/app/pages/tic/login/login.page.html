@@ -1,6 +1,6 @@
 <ion-content>
   <div class="login">
-    <img src="assets/imgs/logo1.png" class="logo"/> 
+    <img src="assets/imgs/logo1.png" class="logo" />
     <!-- <div class="grid">
       <div class="col-12" style="text-align: center">
         <ion-item lines="none" class="input-item">
@@ -27,7 +27,7 @@
         </ion-item>
       </div>
     </div> -->
-    <ion-row style="margin-top: 80px;">
+    <ion-row style="margin-top: 80px">
       <ion-item lines="none" class="input-item">
         <ion-input
           style="border-bottom: 0px"
@@ -36,9 +36,8 @@
           type="email"
           [(ngModel)]="user"
         ></ion-input>
-   
       </ion-item>
- 
+
       <ion-item lines="none" class="input-item">
         <ion-input
           style="border-bottom: 0px"
@@ -47,7 +46,6 @@
           type="password"
           [(ngModel)]="password"
         ></ion-input>
-
       </ion-item>
 
       <ion-col size="12" style="text-align: center">
@@ -56,13 +54,10 @@
         >
       </ion-col>
 
-      <ion-col size="12" style="text-align: center; ">
-        <ion-item lines="none" >
-          <a class="link" [routerLink]="['/recover-password']"
-            ><small>¿Olvidaste tu contraseña?</small></a
-          >
-       
-        </ion-item>
+      <ion-col size="12" style="text-align: center">
+        <a class="link" [routerLink]="['/recover-password']"
+          ><small>¿Olvidaste tu contraseña?</small></a
+        >
       </ion-col>
 
       <ion-col size="12" style="text-align: center">
