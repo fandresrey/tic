@@ -1,21 +1,102 @@
-
-
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-label> Yellow</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label> Man X</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>The  of Zelda</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>-Man</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label> hospedaje World</ion-label>
-    </ion-item>
-  </ion-list>
+<div style="margin-top: 60px">
+  <ion-title size="large">Reserva de Hospedaje</ion-title>
+    <ion-list >
+      <div class="margen">
+        <ion-item *ngFor="let items of listParquedero">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3">
+                <ion-avatar>
+                  <img [src]="items.img" alt="" />
+                </ion-avatar> </ion-col
+              ><ion-col><h2>{{items.titulo}}</h2> </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3"> </ion-col><ion-col size="6"><p>{{items.des}}</p></ion-col><ion-col size="3"><ion-button  (click)="onClick()" expand="block" fill="clear" shape="round">
+                Reservar
+              </ion-button></ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </div>
+    </ion-list>
+  
+</div>
+  <ion-modal
+    (willDismiss)="close()"
+    id="example-modal"
+    #modal
+    trigger="open-custom-dialog"
+    [isOpen]="isModalOpen2"
+  >
+    <ng-template>
+      <div class="wrapper">
+        <h1>Reserva de parquedero</h1>
+
+        <ion-grid >
+          <ion-row>
+            <ion-col>
+              <ion-item class="inputData">
+                <ion-label>Fecha de entrada</ion-label>
+                <ion-input
+                  value="{{ date | date: 'dd.MM.yyyy' }}"
+                  id="date"
+                  class="ion-text-end"
+                ></ion-input>
+                <ion-popover trigger="date" size="cover">
+                  <ng-template>
+                    <ion-datetime
+                      presentation="date"
+                      [(ngModel)]="date"
+                      locale="sl-SI"
+                    ></ion-datetime>
+                  </ng-template>
+                </ion-popover>
+              </ion-item>
+              <ion-item class="inputData">
+                <ion-label>Hora de entrada</ion-label>
+                <ion-input
+                  value="{{hora}}"
+                  id="hora"
+                  class="ion-text-end"
+                ></ion-input>
+                <ion-popover trigger="hora" size="cover">
+                  <ng-template>
+                    <ion-datetime
+                      presentation="time"
+                      [(ngModel)]="hora"
+                      locale="sl-SI"
+                    ></ion-datetime>
+                  </ng-template>
+                </ion-popover>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="display: block"
+              ><ion-button
+                class="bottum"
+                (click)="close()"
+                expand="block"
+                shape="round"
+              >
+                Cancelar
+              </ion-button></ion-col
+            >
+            <ion-col>
+              <ion-button
+                class="bottum"
+                (click)="close(true)"
+                expand="block"
+                shape="round"
+              >
+                Resrevar
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ng-template>
+  </ion-modal>
 </ion-content>

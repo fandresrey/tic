@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-hospedaje',
@@ -6,10 +7,71 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hospedaje.page.scss'],
 })
 export class HospedajePage implements OnInit {
+  listParquedero: any = [
+    {
+      "titulo": "Hospedaje Ud",
+      "img": "assets/imgs/h1.png",
+      "des": 'Calle 10 # 5-51'
+    },
+    {
+      "titulo": "Hospedaje calle 6",
+      "img": "assets/imgs/h2.png",
+      "des": 'Calle 26 # 5-51'
+    },
+    {
+      "titulo": "Hospedaje calle 6",
+      "img": "assets/imgs/h3.png",
+      "des": 'Calle 26 # 5-51'
+    },
+    {
+      "titulo": "Hospedaje centro ud",
+      "img": "assets/imgs/h4.png",
+      "des": 'Trasversal 10 # 5-51'
+    },
+  ]
+  isModalOpen2: boolean = false
+  constructor(private toastr: ToastController) { }
 
-  constructor() { }
-
+  date = '01-01-2000'
+  hora = '12:00'
   ngOnInit() {
   }
 
+  onClick() {
+    console.log('open');
+
+    this.isModalOpen2 = true
+  }
+  close(e?: any) {
+    this.isModalOpen2 = false
+    if (e) {
+
+      this.presentSuccessToast("Su reserva se ha hecho");
+
+    }
+
+
+  }
+
+  async presentSuccessToast(message: string) {
+    const toast = await this.toastr.create({
+      message: message,
+      animated: true,
+      color: 'success',
+      position: 'bottom',
+      duration: 3000
+    });
+    return await toast.present();
+  }
+
+  async presentErrorToast(message: string, duration?: number) {
+    if (!duration) duration = 3000
+    const toast = await this.toastr.create({
+      message: message,
+      animated: true,
+      color: 'danger',
+      duration: duration
+    });
+    return await toast.present();
+  }
 }
