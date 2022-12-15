@@ -1,7 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-<div style="margin-top: 60px">
-  <ion-title size="large">Reserva de Hospedaje</ion-title>
-    <ion-list >
+  <div style="margin-top: 40px">
+    <ion-title size="large">Viajes</ion-title>
+    <ion-list>
       <div class="margen">
         <ion-item *ngFor="let items of listParquedero">
           <ion-grid>
@@ -11,19 +18,27 @@
                   <img [src]="items.img" alt="" />
                 </ion-avatar> </ion-col
               ><ion-col size="6.5"><h2>{{items.titulo}}</h2> </ion-col>
-              <ion-col size="2.5" class="position"><p class="precio">precio:{{items.precio}}</p> </ion-col>  
+              <!-- <ion-col size="2.5" class="position"><p class="precio">precio:{{items.precio}}</p> </ion-col>   -->
             </ion-row>
             <ion-row>
-              <ion-col size="3"> </ion-col><ion-col size="6"><p>{{items.des}}</p></ion-col><ion-col size="3"><ion-button  (click)="onClick()" expand="block" fill="clear" shape="round">
-                Reservar 
-              </ion-button></ion-col>
+              <ion-col size="3"> </ion-col
+              ><ion-col size="6"><p>{{items.des}}</p></ion-col
+              ><ion-col size="3"
+                ><ion-button
+                  (click)="onClick(items)"
+                  expand="block"
+                  fill="clear"
+                  shape="round"
+                >
+                  Pedir
+                </ion-button></ion-col
+              >
             </ion-row>
           </ion-grid>
         </ion-item>
       </div>
     </ion-list>
-  
-</div>
+  </div>
   <ion-modal
     (willDismiss)="close()"
     id="example-modal"
@@ -35,7 +50,7 @@
       <div class="wrapper">
         <h1>Reserva de parquedero</h1>
 
-        <ion-grid >
+        <ion-grid>
           <ion-row>
             <ion-col>
               <ion-item class="inputData">
@@ -101,3 +116,14 @@
     </ng-template>
   </ion-modal>
 </ion-content>
+<ion-footer>
+  <ion-button
+    (click)="navegar()"
+    expand="block"
+    fill="clear"
+    shape="round"
+    color="success"
+  >
+    Navegar
+  </ion-button>
+</ion-footer>

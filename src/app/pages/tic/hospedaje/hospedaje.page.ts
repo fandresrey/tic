@@ -9,24 +9,28 @@ import { ToastController } from '@ionic/angular';
 export class HospedajePage implements OnInit {
   listParquedero: any = [
     {
-      "titulo": "Hospedaje Ud",
+      "titulo": "Hospedaje UD",
       "img": "assets/imgs/h1.png",
-      "des": 'Calle 10 # 5-51'
+      "des": 'Calle 10 # 5-51',
+      "precio":1000
     },
     {
-      "titulo": "Hospedaje calle 6",
+      "titulo": "Hospedaje 1",
       "img": "assets/imgs/h2.png",
-      "des": 'Calle 26 # 5-51'
+      "des": 'Calle 26 # 5-51',
+      "precio":1000
     },
     {
-      "titulo": "Hospedaje calle 6",
+      "titulo": "Hospedaje 2",
       "img": "assets/imgs/h3.png",
-      "des": 'Calle 26 # 5-51'
+      "des": 'Calle 26 # 5-51',
+      "precio":1000
     },
     {
-      "titulo": "Hospedaje centro ud",
+      "titulo": "Hospedaje 3",
       "img": "assets/imgs/h4.png",
-      "des": 'Trasversal 10 # 5-51'
+      "des": 'Trasversal 10 # 5-51',
+      "precio":1000
     },
   ]
   isModalOpen2: boolean = false

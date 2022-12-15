@@ -26,7 +26,7 @@ export class HomePage implements OnInit {
   }
 
   reserves(){
-    this.router.navigate(["/maps"], { replaceUrl: false });
+    this.router.navigate(["/listasmaps"], { replaceUrl: false });
 
 
   }

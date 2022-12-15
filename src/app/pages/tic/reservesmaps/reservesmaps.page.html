@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="map" id="map" style="width: 100%; height: 94%"></div>
+  <div>
+    <ion-button
+      style="width: 90%; margin-left: 5%"
+      (click)="onClick()"
+      expand="block"
+      shape="round"
+    >
+      Pedir
+    </ion-button>
+  </div>
+</ion-content>

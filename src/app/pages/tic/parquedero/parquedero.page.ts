@@ -13,17 +13,20 @@ export class ParquederoPage implements OnInit {
     {
       "titulo": "Parqueadero Ud",
       "img": "assets/imgs/p1.png",
-      "des": 'Calle 10 # 5-51'
+      "des": 'Calle 10 # 5-51',
+      "precio":1000
     },
     {
-      "titulo": "Parquedero calle 6",
+      "titulo": "Parquedero 1",
       "img": "assets/imgs/p2.png",
-      "des": 'Calle 26 # 5-51'
+      "des": 'Calle 26 # 5-51',
+      "precio":1000
     },
     {
-      "titulo": "Parquedero centro ud",
+      "titulo": "Parquedero 2",
       "img": "assets/imgs/p3.png",
-      "des": 'Trasversal 10 # 5-51'
+      "des": 'Trasversal 10 # 5-51',
+      "precio":1000
     },
   ]
   isModalOpen: boolean = false
