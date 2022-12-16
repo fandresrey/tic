@@ -11,7 +11,7 @@ export class ListasmapsPage implements OnInit {
   listParquedero: any = [
     {
       "titulo": "vivero ",
-      "img": "assets/imgs/v1.png",
+      "img": "assets/imgs/vivero.png",
       "des": 'Calle 10 # 5-51',
       "precio": 1000,
       "id": 1,
@@ -22,7 +22,7 @@ export class ListasmapsPage implements OnInit {
     },
     {
       "titulo": "bosa",
-      "img": "assets/imgs/v1.png",
+      "img": "assets/imgs/bosa.png",
       "des": 'Calle 26 # 5-51',
       "precio": 1000,
       "id": 2,
@@ -33,7 +33,7 @@ export class ListasmapsPage implements OnInit {
     },
     {
       "titulo": "macarena",
-      "img": "assets/imgs/v1.png",
+      "img": "assets/imgs/maca.png",
       "des": 'Calle 26 # 5-51',
       "precio": 1000,
       "id": 3,
@@ -44,7 +44,7 @@ export class ListasmapsPage implements OnInit {
     },
     {
       "titulo": "ingenieria",
-      "img": "assets/imgs/v1.png",
+      "img": "assets/imgs/ing.png",
       "des": 'Trasversal 10 # 5-51',
       "precio": 1000,
       "id": 4,
